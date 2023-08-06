@@ -1,0 +1,93 @@
+body {
+    background-color: #18191a;
+}
+
+.student {
+    width: 250px;
+    height:300px;
+    background-color: #242427;
+    float: left;
+    margin-right: 80px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px #84ffff;
+    align-items: center;
+}
+
+.faculty {
+    width: 250px;
+    height:300px;
+    background-color: #242427;
+    float: left;
+    margin-right: 80px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px #84ffff;
+    align-items: center;
+}
+
+.coordinator {
+    width: 250px;
+    height:300px;
+    background-color: #242427;
+    float: left;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px #84ffff;
+    align-items: center;
+}
+
+.info {
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+.s_img, .f_img, .c_img {
+    width: 160px;
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.s_button{
+    margin-top: 25px;
+    border-radius: 20px;
+    border-style: hidden;
+    padding: 9px 45px;
+    text-align: center;
+    margin-left: 45px;
+    color: aliceblue;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    background-color: #84ffff;
+    letter-spacing: 2px;
+}
+
+.f_button {
+    margin-top: 25px;
+    border-radius: 20px;
+    border-style: hidden;
+    padding: 9px 45px;
+    margin-left: 45px;
+    color: aliceblue;
+    color: black;
+    font-weight:bold;
+    font-family: 'Inter', sans-serif;
+    background-color: #84ffff;
+    letter-spacing: 2px;
+}
+
+.c_button {
+    margin-top: 25px;
+    border-radius: 20px;
+    border-style: hidden;
+    padding: 9px 30px;
+    margin-left: 35px;
+    color: aliceblue;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    background-color: #84ffff;
+    letter-spacing: 2px;
+}
+
+.s_button:hover, .f_button:hover, .c_button:hover {
+    border-color: red;
+    border-width: 2px;
+    border-style:double;
+}

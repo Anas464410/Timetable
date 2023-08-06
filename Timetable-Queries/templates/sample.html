@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query9 Example</title>
+    <style>
+        /* Basic styles for the dropdown */
+        .dropdown-container {
+            position: relative;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+        }
+
+        .heading {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .input-text {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .dropdown-list {
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            width: 100%;
+            display: none;
+        }
+
+        .dropdown-item {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* Definition for the "s-btn" class */
+        .s-btn {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container" id="q9-input">
+        <h1 class="heading">Enter Place Name:</h1>
+        <input type="text" id="filterInput9a" class="input-text" placeholder="Type to filter..." autocomplete="off">
+        <div class="dropdown-list" id="dropdownList9a"></div></br>
+
+        <h1 class="heading">Enter Location Name:</h1>
+        <input type="text" id="filterInput9b" class="input-text" placeholder="Type to filter..." autocomplete="off">
+
+        <button class="s-btn q9-input-submit" id="submitButton9">Submit</button>
+    </div>
+
+    <script>
+        // Fruits array acting as dropdown list items
+        const fruits = [
+            "apple",
+            "banana",
+            "cherry",
+            "mango",
+            "orange",
+            "pineapple",
+            "strawberry",
+            "watermelon"
+            // Add more fruit names as needed
+        ];
+
+        function query9(inputId1, dropdownListId, inputId2, submitButtonId) {
+            const inputElement1 = document.getElementById(inputId1);
+            const dropdownListElement = document.getElementById(dropdownListId);
+            const inputElement2 = document.getElementById(inputId2);
+            const submitButton = document.getElementById(submitButtonId);
+
+            // Function to filter and display relevant fruits
+            function updateDropdownList() {
+                const inputValue1 = inputElement1.value.toLowerCase();
+                const filteredFruits = fruits.filter(fruit =>
+                    fruit.toLowerCase().includes(inputValue1)
+                );
+
+                // Clear the existing dropdown items
+                dropdownListElement.innerHTML = "";
+
+                // Add filtered fruits to the dropdown list
+                filteredFruits.forEach(fruit => {
+                    const option = document.createElement("div");
+                    option.textContent = fruit;
+                    option.classList.add("dropdown-item");
+
+                    // Handle click on the dropdown item
+                    option.addEventListener("click", function () {
+                        // Display the selected fruit in the input field
+                        inputElement1.value = fruit;
+
+                        // Hide the dropdown after selection
+                        dropdownListElement.style.display = "none";
+                    });
+
+                    dropdownListElement.appendChild(option);
+                });
+
+                // Display the dropdown
+                dropdownListElement.style.display = "block";
+            }
+
+            // Update the dropdown list when the input field value changes
+            inputElement1.addEventListener("input", updateDropdownList);
+
+            // Handle the input field focus event
+            inputElement1.addEventListener("focus", function () {
+                // Show the whole dropdown
+                updateDropdownList();
+            });
+
+            // Hide the dropdown when the input field loses focus
+            document.addEventListener("click", function (event) {
+                if (!inputElement1.contains(event.target) && !dropdownListElement.contains(event.target)) {
+                    dropdownListElement.style.display = "none";
+                }
+            });
+
+            // Handle the submit button click
+            submitButton.addEventListener("click", function () {
+                const inputValue1 = inputElement1.value.trim();
+                const inputValue2 = inputElement2.value.trim();
+
+                // Check if both input values are entered
+                if (inputValue1 && inputValue2) {
+                    // Show an alert message with the entered values
+                    alert("Place Name: " + inputValue1 + "\nLocation Name: " + inputValue2);
+                } else {
+                    // Show an alert message to provide both values
+                    alert("Please enter both Place Name and Location Name.");
+                }
+            });
+        }
+
+        // Call the function with the provided input element IDs
+        query9("filterInput9a", "dropdownList9a", "filterInput9b", "submitButton9");
+    </script>
+</body>
+</html>

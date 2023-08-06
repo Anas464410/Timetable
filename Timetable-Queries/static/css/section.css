@@ -1,0 +1,39 @@
+body {
+    background-color: #18191a;
+}
+
+.section {
+    margin-left: 75px;
+    margin-top: 75px;
+}
+
+.cse, .csd, .csm, .ece, .eee, .che, .mec, .it, .civil, .mrb {
+    width: 200px;
+    height: 250px;
+    background-color: #242427;
+    float: left;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px #84ffff;
+}
+
+img {
+    width: 150px;
+    border-radius: 200px;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+button {
+    margin-left: 60px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    padding: 9px 30px;
+    border-style: hidden;
+    background-color: #84ffff;
+    color: black;
+}

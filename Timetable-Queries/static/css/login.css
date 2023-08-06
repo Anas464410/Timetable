@@ -1,0 +1,95 @@
+body {
+    background-color: #18191a;
+}
+
+.sign_in {
+    width: 300px;
+    height: 300px;
+    margin-left: 550px;
+    margin-top: 160px;
+    background-color: #242427;
+    padding-left: 80px;
+    padding-bottom: 100px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px #84ffff;
+}
+
+
+.login h1 {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+.email{
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    margin-left: -30px;
+    margin-right: 45px;
+    display: flex;
+    flex-direction:column
+}
+
+.password {
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    margin-left: -30px;
+    margin-right: 45px;
+    display: flex;
+    flex-direction:column
+}
+
+input {
+    position: relative;
+    width: 100%;
+    padding: 7px 0;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+label {
+    position: relative;
+    left: 0;
+    top: 25px;
+    padding: 7px 0;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+hr {
+    margin-right: 50px;
+}
+
+.submit {
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding: 9px 45px;
+    background-color: #84ffff;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    border-style: hidden;
+    letter-spacing: 2px;
+}
+
+.fpassword {
+    font-size: 12px;
+    padding-left: 170px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    padding-top: 0px;
+}
+
+.login {
+    margin-left: 0px;
+}
+

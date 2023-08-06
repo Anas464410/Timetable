@@ -1,0 +1,7 @@
+1) Move images folder inside static folder
+2) Remove user_name from admin_query_1
+3) Change updation of dropdown list
+4) student_form5 pending
+
+
+
